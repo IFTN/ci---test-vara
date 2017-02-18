@@ -1,0 +1,12 @@
+language: none
+
+build:
+  pre_ci:
+    - ls
+  pre_ci_boot:
+    image_name: drydock/u14pytall
+    image_tag: prod
+  ci: 
+    - docker images
+    - docker ps
+    - docker images
