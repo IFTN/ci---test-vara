@@ -2,8 +2,8 @@ language: none
 
 build:
   pre_ci_boot:
-    image_name: drydock/u16javall
-    image_tag: v5.3.2
+    image_name: drydock/u16pytall
+    image_tag: v5.5.1
     pull: false
     options: '--privileged=true --net=bridge -v /home:/home'
   
