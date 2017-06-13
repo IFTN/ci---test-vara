@@ -2,9 +2,12 @@ language: none
 
 build:
   pre_ci:
-    - git --version
-    - ls
+    - echo https://google.com
+    - echo https://news.ycombinator.com
+    - echo http://soccer.reddit.com
+    - echo minimallyminimal.com
   ci: 
-    - docker images
-    - docker ps
-    - docker images
+    - echo https://google.com
+    - echo https://news.ycombinator.com
+    - echo http://soccer.reddit.com
+    - echo minimallyminimal.com
