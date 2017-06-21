@@ -1,10 +1,7 @@
 language: none
 
 build:
-  pre_ci:
-    - git --version
-    - ls
-  ci: 
-    - docker images
-    - docker ps
-    - docker images
+  ci:
+     - echo "Good night"
+    - sleep 2m
+    
