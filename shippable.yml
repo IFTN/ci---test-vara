@@ -2,6 +2,6 @@ language: none
 
 build:
   ci:
-     - echo "Good night"
+    - echo "Good night"
     - sleep 2m
     
