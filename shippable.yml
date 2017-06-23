@@ -1,9 +1,9 @@
 language: none
 
+services:
+  - postgres
+
 build:
-  pre_ci:
-    - git --version
-    - ls
   ci: 
     - docker images
     - docker ps
