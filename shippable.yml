@@ -4,6 +4,10 @@ services:
   - postgres
 
 build:
+  pre_ci_boot:
+    image_name: "drydock/u16pytall"
+    image_tag: "master"
+    pull: false
   ci: 
     - docker images
     - docker ps
