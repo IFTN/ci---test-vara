@@ -5,5 +5,5 @@ build:
     - git --version
     - ls
   ci: 
-    - shipctl get_resource_version_key lololol lo
+    - exit 99
     
