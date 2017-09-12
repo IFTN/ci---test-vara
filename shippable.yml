@@ -5,6 +5,5 @@ build:
     - git --version
     - ls
   ci: 
-    - docker images
-    - docker ps
-    - docker images
+    - shipctl get_resource_version_key lololol lo
+    
