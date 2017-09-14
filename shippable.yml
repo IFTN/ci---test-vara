@@ -1,9 +1,10 @@
 language: none
 
+env:
+  - test_env="echo lol"
+  - test_env="lo"
+
 build:
-  pre_ci:
-    - git --version
-    - ls
   ci: 
-    - sleep 100
+    - eval $test_env
     
