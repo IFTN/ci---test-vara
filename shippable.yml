@@ -5,5 +5,4 @@ build:
     - git --version
     - ls
   ci: 
-    - exit 99
-    
+    - exit 7
