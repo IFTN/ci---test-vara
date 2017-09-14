@@ -5,4 +5,5 @@ build:
     - git --version
     - ls
   ci: 
-    - sleep 100
+    - echo lol
+    
