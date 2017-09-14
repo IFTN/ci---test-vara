@@ -5,4 +5,4 @@ build:
     - git --version
     - ls
   ci: 
-    - exit 87
+    - sleep 100
