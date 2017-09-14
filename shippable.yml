@@ -6,5 +6,5 @@ env:
 
 build:
   ci: 
-    - eval $test_env
+    - for i in {1..100};do;echo $i;done 
     
